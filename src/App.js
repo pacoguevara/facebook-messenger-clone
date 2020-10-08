@@ -42,23 +42,25 @@ function App() {
       />
       <h2>Welcome {username}</h2>
       <form action="" className="app__form">
-        <FormControl>
-          <InputLabel>Enter a message</InputLabel>
+        <FormControl className="app__formControl">
           <Input
+            className="app__input"
+            placeholder="Enter a message..."
             type="text"
             value={input}
             onChange={(event) => setInput(event.target.value)}
           />
+          <IconButton
+            className="app__iconButton"
+            variant="contained"
+            color="primary"
+            type="submit"
+            disabled={!input}
+            onClick={sendMessage}
+          >
+            <SendIcon />
+          </IconButton>
         </FormControl>
-        <IconButton
-          variant="contained"
-          color="primary"
-          type="submit"
-          disabled={!input}
-          onClick={sendMessage}
-        >
-          <SendIcon />
-        </IconButton>
       </form>
       <FlipMove>
         {messages.map(({ message, id }) => (

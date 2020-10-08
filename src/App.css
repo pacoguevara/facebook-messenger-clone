@@ -17,3 +17,17 @@
   flex-direction: row;
   margin: 20px;
 }
+
+.app__formControl {
+  display: flex !important;
+  flex-direction: row !important;
+  width: 100%;
+}
+
+.app__iconButton {
+  flex: 0.2 !important;
+}
+
+.app__input {
+  flex: 1 !important;
+}
